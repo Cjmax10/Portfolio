@@ -151,7 +151,7 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: url('/images/banner.jpg');
+    background: url('./images/banner.jpg');
     background-position: top left;
     background-size: cover;
 }
@@ -168,7 +168,7 @@ h1, h2, h3 {
 
 /* Profile Picture */
 .profile-photo {
-    background: url('/images/profile-pic.jpg');
+    background: url('./images/profile-pic.jpg');
     width: 180px;
     height: 180px;
     background-position: 0 0;
