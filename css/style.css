@@ -1,0 +1,286 @@
+/* Variables */
+:root {
+    --maroon: #ab0032;
+    --lightBlack: #262934;
+    --lighterblack: #454454;
+    --greyWhite: #f2f3f7;
+    --grey: #C0C4D2;
+    --blue: #01b4cc;
+    --yellow: #f1c232;
+    --darkYellow: #D5A419;
+    --darkBlue: #2961ba;
+    --green: #179f56;
+    --white: #fff;
+}
+
+/* Google Fonts - Raleway */
+@font-face {
+    font-family: railway100;
+    src: url('/RalewayFont/Thin100.ttf');
+}
+@font-face {
+    font-family: railway200;
+    src: url('/RalewayFont/ExtraLight200.ttf');
+}
+@font-face {
+    font-family: railway300;
+    src: url('/RalewayFont/Light300.ttf');
+}
+@font-face {
+    font-family: railway400;
+    src: url('/RalewayFont/Regular400.ttf');
+}
+@font-face {
+    font-family: railway500;
+    src: url('/RalewayFont/Medium500.ttf');
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    max-width: max-content;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.primary-btn {
+    background-color: var(--lighterblack);
+    color: var(--greyWhite);
+}
+
+.dark-mode .primary-btn {
+    background-color: var(--darkBlue);
+    color: var(--greyWhite);
+}
+
+.primary-font {
+    color: var(--darkBlue);
+    font-weight: 600;
+}
+
+/* Main Styling */
+html,body {
+    font-family: railway400;
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    line-height: 1.4;
+    color: var(--lightBlack);
+    background-color: var(--white);
+    background: url('/images/body-bg2.jpg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+}
+
+body.dark-mode {
+    background: url('/images/body-bg3.jpg');
+}
+
+body.dark-mode {
+    color: var(--greyWhite);
+    /* background-color: var(--lighterblack); */
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    margin: 30px 0;
+}
+
+/* Container Division */
+#portfolio {
+    display: flex;
+    height: 100vh;
+    box-shadow: #f3f5f5;
+}
+
+.left-container {
+    width: 25%;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    background-color: var(--grey);
+    
+}
+
+.dark-mode .left-container {
+    background-image: linear-gradient(#262934, #353F59);
+    /* background-color: var(--lightBlack) !important; */
+}
+
+.right-container {
+    width: 75%;
+    background-color: var(--white);
+    overflow-y: auto;
+    width: 100%;
+}
+
+
+.dark-mode .right-container {
+    background-color: var(--lighterblack);
+}
+
+/* Home */
+#home {
+    width: 100%;
+    height: 100%;
+    padding: 30px 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url('/images/banner.jpg');
+    background-position: top left;
+    background-size: cover;
+}
+
+.dark-mode #home:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Profile Picture */
+.profile-photo {
+    background: url('/images/profile-pic.jpg');
+    width: 180px;
+    height: 180px;
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+/* Title and Designation */
+.title {
+    padding: 30px 0;
+}
+
+.title .name {
+    font-size: 24px;
+}
+
+/* Navigation */
+.navbar li {
+    padding: 10px 0;
+}
+
+.navbar li a.active {
+    color: var(--darkBlue);
+    border-bottom: var(--darkBlue) 1px solid;
+    padding: 5px 0;
+}
+
+.navbar li a.active:hover {
+    color: var(--darkYellow);
+    border-bottom: var(--darkYellow) 1px solid;
+}
+
+.navbar li a:hover {
+    color: var(--darkYellow);
+}
+
+/* Dark Mode */
+#dark-mode-toggle {
+    position: absolute;
+    bottom: 15px;
+    margin: auto;  
+    width: 80%;
+}
+
+/* Switch from w3schools */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--darkBlue);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--darkBlue);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Introduction */
+.intro {
+    max-width: 400px;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Services */
