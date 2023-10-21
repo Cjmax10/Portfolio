@@ -16,23 +16,23 @@
 /* Google Fonts - Raleway */
 @font-face {
     font-family: railway100;
-    src: url('/RalewayFont/Thin100.ttf');
+    src: url('./RalewayFont/Thin100.ttf');
 }
 @font-face {
     font-family: railway200;
-    src: url('/RalewayFont/ExtraLight200.ttf');
+    src: url('./RalewayFont/ExtraLight200.ttf');
 }
 @font-face {
     font-family: railway300;
-    src: url('/RalewayFont/Light300.ttf');
+    src: url('./RalewayFont/Light300.ttf');
 }
 @font-face {
     font-family: railway400;
-    src: url('/RalewayFont/Regular400.ttf');
+    src: url('./RalewayFont/Regular400.ttf');
 }
 @font-face {
     font-family: railway500;
-    src: url('/RalewayFont/Medium500.ttf');
+    src: url('./RalewayFont/Medium500.ttf');
 }
 
 /* CSS Reset */
@@ -80,14 +80,14 @@ html,body {
     line-height: 1.4;
     color: var(--lightBlack);
     background-color: var(--white);
-    background: url('/images/body-bg2.jpg');
+    background: url('./images/body-bg2.jpg');
     background-repeat: no-repeat;
     background-position: left top;
     background-size: cover;
 }
 
 body.dark-mode {
-    background: url('/images/body-bg3.jpg');
+    background: url('./images/body-bg3.jpg');
 }
 
 body.dark-mode {
