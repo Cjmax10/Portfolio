@@ -541,6 +541,7 @@ img {
     bottom: 35px;
     left: 50%;
     transform: translateX(-50%);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -576,6 +577,15 @@ img {
   #contact-b .contact-info,
   .items {
     grid-template-columns: 1fr;
+  }
+
+  .items {
+    grid-gap: 20px;
+    box-shadow: none;
+  }
+
+  .items .item {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
   }
 
   #home-a .about-info {
