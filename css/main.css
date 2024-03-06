@@ -175,6 +175,7 @@ input[class^='btn-']:hover {
   height: 100%;
   line-height: 0;
   object-fit: cover;
+  object-position: top;
 }
 
 .item-text {
