@@ -97,6 +97,10 @@ input[class^='btn-']:hover {
   padding: 4rem 0;
 }
 
+.ml {
+  margin-left: 15px;
+}
+
 .section-title {
   font-size: 2rem;
   display: block;
@@ -114,122 +118,136 @@ input[class^='btn-']:hover {
   margin: 0 auto 1rem auto;
 }
 
-.items {
+#work-a {
+  background-color: #ccc;
+}
+
+body.work {
+  background-color: #ccc;
+}
+
+.grid-section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  grid-template-columns: repeat(3, 400px);
+  justify-content: center;
+  gap: 50px;
 }
 
-.item {
+.grid-section.projects {
+  grid-template-columns: repeat(4, 250px);
+}
+
+.grid-section .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 15px 15px 25px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.grid-section.projects .card {
+  gap: 15px;
+  padding: 15px;
   position: relative;
-  background: #ffbc00;
-  overflow: hidden;
 }
 
-.item::after {
-  content: '';
-  position: absolute;
-  display: block;
-  background: inherit;
-  opacity: 0.9;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
-  transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+.grid-section.projects .card .badge {
+  border-radius: 25px;
+  padding: 5px 15px;
+  font-weight: 600;
+  font-size: 12px;
 }
 
-.item:hover:after {
-  transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
-}
-
-.item:hover .item-image {
-  transform: scale(1.2);
-}
-
-.item:hover .item-text {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.item-image {
-  height: auto;
-  transform: translateZ(0);
-  display: block;
-  transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-.item-image:before {
-  content: '';
-  display: block;
-  padding-top: 75%;
-  overflow: hidden;
-}
-
-.item-image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  line-height: 0;
+.grid-section .card img{
+  border-radius: 5px;
+  aspect-ratio: 16/9;
   object-fit: cover;
-  object-position: top;
 }
 
-.item-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 10px;
-  opacity: 0;
-  text-align: center;
-  z-index: 1;
-  color: #fff;
-  transform: translateY(-20%);
-  transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1), transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
-  transition-delay: 300ms;
+.grid-section .card p{
+  text-align: start;
+  font-size: 18px;
 }
 
-.item-text-wrap {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+.grid-section.projects .card p{
+  height: 70px;
+  margin-bottom: 15px;
 }
 
-.item-text-wrap .btn-dark {
-  margin-top: 8px;
+.grid-section.projects .card p {
+  font-size: 14px;
 }
 
-.item-text-wrap .btn-dark:hover {
-  background-color: #fff;
-  color: #ffbc00;
+.grid-section .card .btn{
+  padding: 5px 25px;
+  border: 1px solid black;
+  border-radius: 5px ;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
 }
 
-.item-text-title {
-  font-size: 2rem;
-  padding: 0 1rem;
-  margin: 5px 0 0 0;
+.grid-section .card .btn:hover{
+  background-color: #ffbc00;
+  /* color: #f4f4f4; */
+  border-color: #ffbc00;
 }
 
-.item-text-category {
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  opacity: 0.7;
-  margin: 0;
+.grid-section .card i{
+  margin-right: 10px;
 }
 
-.item .mobile-btn-wrap {
-  display: none;
+.badge {
+  border-radius: 25px;
+  padding: 5px 15px;
+  font-weight: 600;
 }
 
-.item .mobile-btn-wrap .btn-main {
-  background-color: rgba(255, 255, 255, 0.8);
+.badge.green {
+  background-color: #0dd90d47;
+  color: #195519;
 }
+
+.badge.blue {
+  background-color: #0081f259;
+  color: #094173;
+}
+
+.badge.pink {
+  background-color: #dfb1b94a;
+  color: #bf6272;
+}
+
+.badge.orange {
+  background-color: #ffa50124;
+  color: #e39b16;
+}
+
+.badge.purple {
+  background-color: #e809e82e;
+  color: #7d007d;
+}
+
+.badge.black {
+  background-color: #735f5f1c;
+  color: black;
+}
+
+.badge.red {
+  background-color: #ff000030;
+  color: #c12222;
+}
+
+.badge.yellow {
+  background-color: #f7f70236;
+  color: #888802;
+}
+
+
 
 * {
   margin: 0;
@@ -484,6 +502,13 @@ img {
   background: #333;
   color: #fff;
   height: 5rem;
+}
+
+#main-footer.work {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 #main-footer a {
