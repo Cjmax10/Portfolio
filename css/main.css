@@ -504,13 +504,6 @@ img {
   height: 5rem;
 }
 
-#main-footer.work {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 #main-footer a {
   color: #fff;
 }
@@ -538,6 +531,53 @@ img {
 #main-footer .footer-content .social a .fa-brands:hover {
   background: #ffbc00;
 }
+
+/* Tabs */
+#tabs {
+  max-width: 100%;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+#tabs menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.25rem;
+}
+
+#tabs button {
+  font: inherit;
+  font-size: 0.85rem;
+  background-color: #282f33;
+  border: none;
+  border-bottom-color: #ffbc00;
+  color: #e0eff1;
+  border-radius: 4px 4px 0 0;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+#tabs button:hover,
+#tabs button.active {
+  background-color: #ffbc00;
+  color: #2d3942;
+}
+
+#tab-content {
+  background-color: #2d3942;
+  border-radius: 0 4px 4px 4px;
+  padding: 50px 1rem;
+}
+
+#tab-content li {
+  margin: 0.75rem 0;
+}
+
+/* Tabs */
 
 @media (max-width: 1200px) {
   .grid-section {

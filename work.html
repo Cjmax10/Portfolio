@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/tabs.js" defer></script>
     <title>My Work | UI Developer</title>
 </head>
 
@@ -37,26 +38,14 @@
             <div class="bottom-line"></div>
             <p class="lead">Checkout some of my projects</p>
             
-            <!-- Grid -->
-            <div class="grid-section">
-                <div class="card">
-                    <img src="img/projects/frontendmentor.jpg" alt="">
-                    <div class="badge green">Frontend Mentor Challenges</div>
-                    <p>Real-world UI/UX design tasks from Frontend Mentor to test and improve your skills.</p>
-                    <a href="frontendmentor.html" class="btn"><i class="fa-solid fa-arrow-right-to-bracket"></i> Visit</a>
-                </div>
-                <div class="card">
-                    <img src="img/projects/miniproject.jpg" alt="">
-                    <div class="badge blue">Mini Projects</div>
-                    <p>Small-scale experiments showcasing practical skills and creativity.</p>
-                    <a href="miniprojects.html" class="btn"><i class="fa-solid fa-arrow-right-to-bracket"></i> Visit</a>
-                </div>
-                <div class="card">
-                    <img src="img/projects/staticwebsite.jpg" alt="">
-                    <div class="badge pink">Static Websites</div>
-                    <p>Simple, visually appealing websites with fixed content and layout.</p>
-                    <a href="staticwebsites.html" class="btn"><i class="fa-solid fa-arrow-right-to-bracket"></i> Visit</a>
-                </div>
+            <div id="tabs">
+                <menu>
+                  <button id="frontendmentor" class="active">Frontendmentor Challenges</button>
+                  <button id="miniProjects">Mini Projects</button>
+                  <button id="staticWebsites">Static Websites</button>
+                </menu>
+            <div id="tab-content">
+                <div class="grid-section projects"></div>
             </div>
         </div>
     </section>
