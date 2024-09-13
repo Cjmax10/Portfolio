@@ -144,6 +144,12 @@ const content = [
             link: 'https://cjmax10.github.io/newsgrid_website/'
         },
         {
+            img: 'img/projects/luminacreative.png',
+            title: 'Lumina Creative',
+            description: 'Lumina Creative is a minimalist demo website for a photography studio, showcasing a curated selection of photos with a sleek, elegant design.',
+            link: 'https://cjmax10.github.io/lumina-creative/'
+        },
+        {
             img: 'img/projects/mochaaccounting.png',
             title: 'Mocha Accounting',
             description: 'Mocha Accounting website using JavaScript and CSS animations for dynamic financial management features.',
@@ -155,6 +161,7 @@ const content = [
             description: 'A demo website showcasing banking services with user-friendly design and functionality.',
             link: 'https://cjmax10.github.io/you-first/'
         }
+        
     ]
   ];
   
