@@ -1,3 +1,10 @@
+const colors = ['green', 'blue', 'pink', 'orange', 'purple', 'black', 'red', 'yellow'];
+
+function randomColor() {
+    const randomNumber = Math.floor(Math.random() * 8);
+    return colors[randomNumber];
+}
+
 const content = [
     [
         {
@@ -162,7 +169,7 @@ const content = [
       listContent += `
         <div class="card">
             <img src="${item.img}" alt="">
-            <div class="badge green">${item.title}</div>
+            <div class="badge ${randomColor()}">${item.title}</div>
             <p>${item.description}</p>
             <a href="${item.link}" target="_blank" class="btn"><i class="fa-solid fa-arrow-right-to-bracket"></i> Live Project</a>
         </div>
