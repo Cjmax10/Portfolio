@@ -737,7 +737,7 @@ img {
 
   .grid-section {
     display: grid;
-    grid-template-columns: repeat(1, 90vw);
+    grid-template-columns: repeat(1, 90%);
     justify-content: center;
     gap: 50px;
     margin-bottom: 100px;
